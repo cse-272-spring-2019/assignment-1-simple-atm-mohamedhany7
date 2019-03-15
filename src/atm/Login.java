@@ -376,7 +376,6 @@ public class Login extends javax.swing.JFrame {
                 String message = "You deposited " + Enternumber + "$"; 
                 ATM.history(message);
                 ATMS.cn++;
-                ATM.first++;
                 Message m = new Message();
                 m.setVisible(true);
                 m.setmsg(2,"You have successfully");
@@ -390,7 +389,6 @@ public class Login extends javax.swing.JFrame {
                      String message = "You withdrew " + Enternumber + "$"; 
                      ATM.history(message);
                      ATMS.cn++;
-                     ATM.first++;
                      Message m = new Message();
                     m.setVisible(true);
                     m.setmsg(2,"You have successfully");

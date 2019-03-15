@@ -189,9 +189,7 @@ public class ATMS extends javax.swing.JFrame {
         Login n = new Login();
         n.setVisible(true);
         type = 2;
-        if (ATM.first != 0){
         jButton6.setEnabled(true);
-        }
         jButton4.setEnabled(false);
         jButton5.setEnabled(false);
         jLabel1.setText("Please choose your action");
@@ -200,6 +198,7 @@ public class ATMS extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jButton4.setEnabled(false);
         jButton5.setEnabled(false);
+        jButton6.setEnabled(true);
         double balance;
         balance = ATM.c1.get_balance();
         jLabel1.setText("Your balance is " + balance + "$");
@@ -217,12 +216,15 @@ public class ATMS extends javax.swing.JFrame {
         if (ch==0)
             jButton5.setEnabled(false);
         }
+        if(ATM.history[ATM.count2+1]==null)
+        {
+            jButton5.setEnabled(false);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if (ATM.first != 0){
         jButton6.setEnabled(true);
-        }        jButton4.setEnabled(false);
+        jButton4.setEnabled(false);
         jButton5.setEnabled(false);
         Login m = new Login();
         m.setVisible(true);

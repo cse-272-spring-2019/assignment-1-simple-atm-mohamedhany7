@@ -19,7 +19,6 @@ public class ATM {
     public static int counter=3;
     public static int count=0;
     public static int count2=0;
-    public static int first=0;
     public static double card_num=0;
     public static int type=0;
     public static boolean found;
